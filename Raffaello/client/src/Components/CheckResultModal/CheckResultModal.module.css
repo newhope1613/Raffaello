@@ -1,0 +1,43 @@
+.wrapped {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  position: relative;
+  width: 62.5rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 14.8rem 4rem 11.3rem;
+  align-items: center;
+  border-radius: 2.6rem;
+  gap: 1.6rem;
+  background: var(--color-background);
+}
+
+.svg {
+  position: absolute;
+  top: 2.6rem;
+  right: 3.8rem;
+}
+
+.text {
+  display: flex;
+  font-weight: 600;
+  font-size: 2.6rem;
+  line-height: 3.25rem;
+  text-transform: uppercase;
+  color: var(--color-white);
+  gap: 1.6rem;
+}
+
+.button {
+  font-size: 2rem;
+  line-height: 3.25rem;
+  text-align: center;
+  text-decoration: underline;
+  color: var(--color-white);
+}

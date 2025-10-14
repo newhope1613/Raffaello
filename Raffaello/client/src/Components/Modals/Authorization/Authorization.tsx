@@ -1,0 +1,51 @@
+import Card from "../../Card/Card";
+import styles from "./Authorization.module.css";
+import { Button } from "../../Button/Button";
+import { useForm } from "react-hook-form";
+
+type FormData = {
+  phone: string;
+  password: number;
+};
+
+const Authorization = () => {
+  const {
+    register,
+    formState: { errors },
+  } = useForm<FormData>();
+  return (
+    <div className={styles.container}>
+      <Card title="Авторизация">
+        <form className={styles.form}>
+          <label htmlFor="phone"></label>
+          <input
+            type="text"
+            id="phone"
+            {...register("phone", { required: true })}
+            className={styles.input}
+            placeholder="+7 (000) 000 00 00"
+          />
+          {errors.phone && <span>*Это поле обязательное</span>}
+          <label htmlFor="password"></label>
+          <input
+            type="password"
+            id="password"
+            {...register("password", { required: true })}
+            className={styles.input}
+            placeholder="ПАРОЛЬ"
+          />
+          {errors.password && <span>*Это поле обязательное</span>}
+          <button className={styles.buttonRecovery}>Восстановить пароль</button>
+          <div className={styles.buttonFooter}>
+            <Button variant="primary">Войти</Button>
+            <button className={styles.button}>
+              Зарегистрироваться
+            </button>
+          </div>
+        </form>
+      </Card>
+    </div>
+  );
+};
+
+export default Authorization;

@@ -1,0 +1,38 @@
+.header {
+  height: 4.3rem;
+  background: var(--color-background);
+  display: flex;
+  justify-content: space-between;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  width: 2rem;
+  height: 1.6rem;
+  margin-left: 12rem;
+}
+
+.sticks {
+  background: var(--color-white);
+  height: 4px;
+  width: 2rem;
+  border-radius: 2px;
+}
+
+.button {
+  border: none;
+  background-color: var(--color-background);
+  color: var(--color-white);
+}
+
+.changeLanguage {
+  color: var(--color-white);
+  width: 8rem;
+  height: 2.3rem;
+  font-size: 1.6rem;
+  align-self: center;
+  margin-right: 5.6rem;
+}

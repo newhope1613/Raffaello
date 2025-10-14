@@ -1,0 +1,77 @@
+.wrapped {
+  background: url("BG2.png") no-repeat center top;
+  background-size: cover;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.headerLogo {
+  display: flex;
+  justify-content: center;
+  margin-top: -2.1rem;
+}
+
+.headerLogoImg {
+  width: 12.5rem;
+  height: 7rem;
+}
+
+.personalAccount {
+  display: flex;
+  position: absolute;
+  top: 3.6rem;
+  left: 11rem;
+  gap: 10px;
+}
+
+.button {
+  font-size: 2rem;
+  line-height: 100%;
+  letter-spacing: -2%;
+}
+
+.greeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5.8rem;
+  padding-top: 15rem;
+}
+
+.myPrizes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7.8rem;
+  gap: 2rem;
+}
+
+.prizes {
+  display: flex;
+  gap: 6.25rem;
+}
+
+.draw {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3.75rem 0 8.3rem 0;
+  gap: 122px;
+}
+
+.winPrizeButtonPosition {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  margin-bottom: 6rem;
+}
+
+.span {
+  color: var(--color-orange);
+  font-size: 2rem;
+}

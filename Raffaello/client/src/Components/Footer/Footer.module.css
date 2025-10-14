@@ -1,0 +1,19 @@
+.footer {
+  height: 6.6rem;
+  width: auto;
+  background: var(--color-background);
+}
+
+.footerTexts {
+  height: 100%;
+  color: var(--color-white);
+  font-size: 1.8rem;
+  margin: 0 17rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button {
+  color: var(--color-white);
+}
