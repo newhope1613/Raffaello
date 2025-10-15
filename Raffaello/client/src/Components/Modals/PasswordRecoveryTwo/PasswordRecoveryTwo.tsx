@@ -4,7 +4,7 @@ import styles from "./PasswordRecoveryTwo.module.css";
 import { useState } from "react";
 
 const PasswordRecoveryTwo = () => {
-  const [number, setNumber] = useState(Array(6).fill(""));
+  const [number] = useState(Array(6).fill(""));
 
   return (
     <div className={styles.container}>
