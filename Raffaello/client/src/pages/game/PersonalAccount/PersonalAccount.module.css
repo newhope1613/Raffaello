@@ -3,19 +3,80 @@
   background-size: cover;
   margin: 0 auto;
   width: 100%;
-  min-height: 100vh;
+  height: 1%;
   position: relative;
+}
+
+.decor {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.decor img:first-child {
+  position: absolute;
+  z-index: 2;
+  top: 13rem;
+  left: 0;
+}
+
+.decor img:nth-child(2) {
+  position: absolute;
+  top: 11rem;
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.decor img:nth-child(3) {
+  position: absolute;
+  top: 64rem;
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.decor img:nth-child(4) {
+  position: absolute;
+  bottom: -10rem;
+  left: 0;
+}
+
+.decor img:nth-child(5) {
+  position: absolute;
+  top: 30rem;
+  left: 0;
+}
+
+.decor img:nth-child(6) {
+  position: absolute;
+  top: 16rem;
+  right: 0;
+}
+
+.decor img:nth-child(7) {
+  position: absolute;
+  top: 70rem;
+  left: -3rem;
+  transform: scaleX(-1);
+}
+
+.decor img:nth-child(8) {
+  position: absolute;
+  bottom: 2rem;
+  right: 0;
 }
 
 .headerLogo {
   display: flex;
   justify-content: center;
-  margin-top: -2.1rem;
 }
 
 .headerLogoImg {
+  z-index: 999;
   width: 12.5rem;
   height: 7rem;
+  margin-top: -2.1rem;
 }
 
 .personalAccount {
@@ -38,7 +99,7 @@
   justify-content: center;
   align-items: center;
   gap: 5.8rem;
-  padding-top: 15rem;
+  padding-top: 8.5rem;
 }
 
 .myPrizes {
@@ -62,16 +123,45 @@
   gap: 122px;
 }
 
+.drawCandie {
+  width: 75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.drawCandie img {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.drawCandie img:hover {
+  transform: translateY(-15px);
+}
+
 .winPrizeButtonPosition {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
   gap: 8rem;
-  margin-bottom: 6rem;
 }
 
 .span {
   color: var(--color-orange);
   font-size: 2rem;
 }
+
+@media (max-width: 1440px) {
+  .personalAccount {
+    display: flex;
+    position: absolute;
+    top: 4.6rem;
+    left: 8rem;
+    gap: 10px;
+  }
+}
+
+

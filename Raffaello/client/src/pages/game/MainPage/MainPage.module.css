@@ -2,8 +2,7 @@
   background: url("BG.png") no-repeat center top;
   background-size: cover;
   width: 100%;
-  margin: 0 auto;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -34,12 +33,6 @@
   gap: 10px;
   width: 17.3rem;
   height: 2.5rem;
-}
-
-.verticalBar {
-  font-size: 1.8rem;
-  background-color: var(--color-background);
-  color: var(--color-orange);
 }
 
 .button {
@@ -87,6 +80,7 @@
 .p {
   color: var(--color-orange);
   font-size: 1.2rem;
+  font-family: "Revard.ttf", "Segoe UI", sans-serif;
 }
 
 .span {
@@ -98,15 +92,25 @@
 
 .winPrizesContainer {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin-top: 10.8rem;
 }
 
 .winPrizesImages {
-  width: 101.5rem;
+  position: relative;
+  width: 100%;
   height: 86.6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.winPrizesImages img {
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  opacity: 1;
+}
+
+.winPrizesImages img.hide {
+  opacity: 0;
+  transform: scale(0.95);
 }
 
 .winPrizesImages img:first-child {
@@ -117,39 +121,43 @@
 
 .winPrizesImages img:nth-child(2) {
   position: absolute;
-  top: 10rem;
-  right: 18.4rem;
-}
-
-.winPrizesImages img:nth-child(3) {
-  position: absolute;
   top: 20rem;
   left: 41rem;
 }
 
-.winPrizesImages img:nth-child(4) {
+.winPrizesImages img:nth-child(3) {
   position: absolute;
   top: 50rem;
   left: 13.7rem;
 }
 
-.winPrizesImages img:nth-child(5) {
+.winPrizesImages img:nth-child(4) {
   position: absolute;
   top: 50rem;
   right: 239px;
 }
 
-.arrowOne {
-  position: absolute;
-  top: 40rem;
-  right: 0;
-  width: 100%;
-}
+.arrowOne,
 .arrowTwo {
   position: absolute;
+  width: 44px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10;
+}
+
+.arrowOne {
   top: 40rem;
-  left: 85rem;
-  width: 100%;
+  left: 13rem;
+}
+
+.arrowTwo {
+  top: 40rem;
+  right: 13rem;
+}
+
+.arrowOne:hover,
+.arrowTwo:hover {
+  transform: translateY(-15px) scale(1.2);
 }
 
 .arrowTwo img {
@@ -174,6 +182,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .winPrizeMangoAndLeaves img:first-child {
